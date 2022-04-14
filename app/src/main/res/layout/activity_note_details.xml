@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NoteDetails">
+
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -27,7 +28,8 @@
     <TextView
         android:id="@+id/contentofnotedetail"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:height="700dp"
         android:layout_below="@id/toolbarofnotedetail"
         android:background="#faf7f7"
         android:gravity="top|left"

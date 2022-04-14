@@ -26,7 +26,7 @@ public class NoteDetails extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbarofnotedetail);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Intent data=getIntent();
+        Intent data = getIntent();
         editNote.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -37,8 +37,8 @@ public class NoteDetails extends AppCompatActivity {
                 view.getContext().startActivity(intent);
             }
         });
-        titleNoteDetail.setText(data.getStringExtra("content"));
-        contentNoteDetail.setText(data.getStringExtra("title"));
+        titleNoteDetail.setText(data.getStringExtra("title"));
+        contentNoteDetail.setText(data.getStringExtra("content"));
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

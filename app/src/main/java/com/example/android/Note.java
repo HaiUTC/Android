@@ -110,14 +110,12 @@ public class Note extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         //we have to open note detail activity
-
-
                         Intent intent=new Intent(v.getContext(),NoteDetails.class);
                         intent.putExtra("title",firebasemodel.getTitle());
                         intent.putExtra("content",firebasemodel.getContent());
                         intent.putExtra("noteId",docId);
-
                         v.getContext().startActivity(intent);
+
 
                         // Toast.makeText(getApplicationContext(),"This is Clicked",Toast.LENGTH_SHORT).show();
                     }
@@ -188,7 +186,7 @@ public class Note extends AppCompatActivity {
         staggeredGridLayoutManager=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         mrecyclerview.setLayoutManager(staggeredGridLayoutManager);
         mrecyclerview.setAdapter(noteAdapter);
-
+        mrecyclerview.setItemAnimator(null);
 
     }
 
